@@ -30,12 +30,12 @@ COPY CRFLib/CRFplusplus_v0.58.zip .
 RUN unzip CRFplusplus_v0.58.zip -d CRF58
 RUN rm CRFplusplus_v0.58.zip
 ####update CRFv.058 files in GNormPlus
-RUN cp -r CRF58/*  GNormPlusJava/CRF
-RUN cd GNormPlusJava/CRF
+RUN cp -r /CRF58/*  /GNormPlusJava/CRF
+RUN cd /GNormPlusJava/CRF
 RUN pwd
 RUN ls
-RUN chmod +x GNormPlusJava/CRF/configure
-RUN GNormPlusJava/CRF/configure
+RUN chmod +x configure
+RUN ./configure
 RUN make
 RUN make install
 
