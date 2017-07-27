@@ -33,8 +33,9 @@ RUN rm CRFplusplus_v0.58.zip
 RUN cp -r CRF58/*  GNormPlusJava/CRF
 RUN cd GNormPlusJava/CRF
 RUN pwd
-RUN chmod +x configure
-RUN ./configure
+RUN ls
+RUN chmod +x GNormPlusJava/CRF/configure
+RUN GNormPlusJava/CRF/configure
 RUN make
 RUN make install
 
