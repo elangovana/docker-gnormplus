@@ -1,5 +1,5 @@
 #
-# Super simple example of a Dockerfile
+# Gnormplus Docker file
 #
 FROM ubuntu:latest
 MAINTAINER Elangovan
@@ -19,6 +19,8 @@ RUN apt-get -y install oracle-java8-installer
 RUN wget https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/download/GNormPlus/GNormPlusJava.zip
 RUN apt-get -y install unzip
 RUN unzip GNormPlusJava.zip -d GNormPlusJava
+RUN rm  GNormPlusJava.zip
+
 
 ####CRF set up for GNormPlus
 ########Install C++ compilers for CRF
@@ -26,6 +28,8 @@ RUN apt-get -y install build-essential
 RUN apt-get -y install gawk
 COPY CRFLib/CRFplusplus_v0.58.zip .
 RUN unzip CRFplusplus_v0.58.zip -d CRF58
+RUN rm CRFplusplus_v0.58.zip
+####update CRFv.058 files in GNormPlus
 RUN copy -r CRF58/*  GNormPlusJava/CRF
 RUN cd CRF
 RUN chmod +x ./configure
