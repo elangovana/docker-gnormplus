@@ -16,7 +16,7 @@ RUN apt-get -y install oracle-java8-installer
 
 
 #GNormPlus set up
-RUN wget https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/download/GNormPlus/GNormPlusJava.zip
+RUN wget -nv https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/download/GNormPlus/GNormPlusJava.zip
 RUN apt-get -y install unzip
 RUN unzip GNormPlusJava.zip -d .
 RUN rm  GNormPlusJava.zip
