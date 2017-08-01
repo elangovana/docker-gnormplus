@@ -39,5 +39,8 @@ RUN ./configure
 RUN make
 RUN make install
 
+#some execute permissions that are missing
+WORKDIR /GNormPlusJava
+RUN chmod +x Ab3P
 
-WORKDIR /home
+WORKDIR /GNormPlusJava
