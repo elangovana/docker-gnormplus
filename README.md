@@ -1,6 +1,6 @@
 
 # docker-gnormplus
-Docker for Gnormplus Gene Normalisation
+Docker for Gnormplus for gene named entity recognition & gene normalisation
 
 ## How to run
 1. Start docker and map your local host path (e.g /mnt/biocreative/gnormplus) to the container path /gnormdata
