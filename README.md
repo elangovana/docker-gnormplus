@@ -36,5 +36,5 @@ Docker for Gnormplus for gene named entity recognition & gene normalisation
 	DeleteTmp = True
 ```
 ## Additional Information
-https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/gnormplus/
+GNormplus - https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/gnormplus/
 
