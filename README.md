@@ -1,12 +1,3 @@
-# docker-gnormplus
-Docker for Gnormplus Gene Normalisation
-
-## How to run
-1. Run docker, mount the host drive containing the GnormData input, output & dictionary.
-> docker run -i -t lanax/gnormplus -v /mnt/biocreative/gnormplus:/gnormdata
-
-2. Run GNormPlus
-> java -Xmx10G -Xms10G -jar /GNormPlusJava/GNormPlus.jar /gnormdata/input /gnormdata/output /gnormdata/setup.txt
 
 # docker-gnormplus
 Docker for Gnormplus Gene Normalisation
@@ -15,7 +6,7 @@ Docker for Gnormplus Gene Normalisation
 1. Start docker and map your local host path (e.g /mnt/biocreative/gnormplus) to the container path /gnormdata
 > docker run -i -t lanax/gnormplus -v /mnt/biocreative/gnormplus:/gnormdata
 
-2. Run GNormPlus with input files in mounted directory /gnormdata/input,
+2. Inside the docker container, run GNormPlus with input files in mounted directory /gnormdata/input.
 > java -Xmx10G -Xms10G -jar /GNormPlusJava/GNormPlus.jar /gnormdata/input /gnormdata/output /gnormdata/setup.txt
 
 ##### Sample setup.txt
