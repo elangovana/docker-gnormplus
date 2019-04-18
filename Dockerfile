@@ -44,3 +44,5 @@ WORKDIR /GNormPlusJava
 RUN chmod +x Ab3P
 
 WORKDIR /GNormPlusJava
+
+CMD ["/bin/bash"]
