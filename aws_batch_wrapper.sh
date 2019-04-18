@@ -15,7 +15,9 @@ mkdir -p ${dest_local_path}
 pip3 install awscli
 
 # Copy data from s3
+echo Running aws s3 sync ${src_s3} ${src_local_path}
 aws s3 sync ${src_s3} ${src_local_path}
+
 # Optionally copy setup s3
 if [ "${setupfile_s3}" = "" ]; then
     echo "No set up file.. Using default"
@@ -29,4 +31,5 @@ cd /GNormPlusJava
 java -Xmx${maxJava} -Xms${minJava} -jar GNormPlus.jar ${src_local_path}  ${dest_local_path} setup.txt
 
 # Copy results back s3
+echo Running aws s3 sync ${dest_local_path} ${src_local_path}
 aws s3 sync ${dest_local_path} ${src_local_path}
