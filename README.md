@@ -48,6 +48,10 @@ Docker for Gnormplus for gene named entity recognition & gene normalisation
     ```
 
 ## Running on aws batch
+For aws batch, see [aws_batch/Readme.md](aws_batch/Readme.md)
+    
+For download and update results from S3.
+    
     ```bash
     docker run -i -v /data/full_pubmed/:/gnormdata lanax/gnormplus /bin/bash aws_batch_wrapper.sh s3://aegovan-data/pubmed_json_parts/part_0/pubmed19n0219.json.txt /gnormdata/input s3://aegovan-data/test_dumm/  /gnormdata/output 10G 20G 
     ```
