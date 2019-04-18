@@ -1,7 +1,7 @@
 #
 # Gnormplus Docker file
 #
-FROM ubuntu:16.04
+FROM ubuntu:17.04
 MAINTAINER Elangovan
 
 RUN apt-get install -y apt-transport-https
