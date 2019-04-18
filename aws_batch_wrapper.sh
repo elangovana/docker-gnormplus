@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-src_s3=@1
-src_local_path=@2
-dest_s3=@3
-dest_local_path=@4
-minJava=@5
-maxJava=@6
-setupfile_s3=@7
+src_s3=$1
+src_local_path=$2
+dest_s3=$3
+dest_local_path=$4
+minJava=$5
+maxJava=$6
+setupfile_s3=$7
 
 mkdir -p ${src_local_path}
 mkdir -p ${dest_local_path}
