@@ -1,9 +1,10 @@
 #
 # Gnormplus Docker file
 #
-FROM ubuntu:17.04
+FROM ubuntu:16.04
 MAINTAINER Elangovan
 
+RUN apt-get install -y apt-transport-https
 RUN apt-get update
 
 #install oracle jdk 8
