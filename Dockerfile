@@ -1,7 +1,7 @@
 #
 # Gnormplus Docker file
 #
-FROM ubuntu:16.04
+FROM ubuntu:16.10
 MAINTAINER Elangovan
 
 RUN apt-get update
