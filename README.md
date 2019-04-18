@@ -47,6 +47,13 @@ Docker for Gnormplus for gene named entity recognition & gene normalisation
         java -Xmx10G -Xms10G -jar /GNormPlusJava/GNormPlus.jar /gnormdata/input /gnormdata/output setup.txt
     ```
 
+## Running on aws batch
+    ```bash
+    docker run -i -v /data/full_pubmed/:/gnormdata lanax/gnormplus /bin/bash aws_batch_wrapper.sh s3://aegovan-data/pubmed_json_parts/part_0/pubmed19n0219.json.txt /gnormdata/input s3://aegovan-data/test_dumm/  /gnormdata/output 10G 20G 
+    ```
+
 ## Additional Information
 GNormplus - https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/gnormplus/
+
+
 
