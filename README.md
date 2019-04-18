@@ -44,7 +44,7 @@ Docker for Gnormplus for gene named entity recognition & gene normalisation
 
 2. Inside the docker container, run GNormPlus with input files in mounted directory /gnormdata/input.
     ```bash
-        java -Xmx10G -Xms10G -jar /GNormPlusJava/GNormPlus.jar /gnormdata/input /gnormdata/output /gnormdata/setup.txt
+        java -Xmx10G -Xms10G -jar /GNormPlusJava/GNormPlus.jar /gnormdata/input /gnormdata/output setup.txt
     ```
 
 ## Additional Information
