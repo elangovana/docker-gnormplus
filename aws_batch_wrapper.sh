@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 tmp_dir=$(python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)')
-src_s3=$1/${tmp_dir}
-src_local_path=$2
+src_s3=$1
+src_local_path=$2/${tmp_dir}
 dest_s3=$3
 dest_local_path=$4/${tmp_dir}
 minJava=$5
