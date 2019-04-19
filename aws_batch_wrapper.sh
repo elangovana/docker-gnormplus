@@ -32,4 +32,4 @@ cd /GNormPlusJava
 java -Xmx${maxJava} -Xms${minJava} -jar GNormPlus.jar ${src_local_path}  ${dest_local_path} setup.txt
 
 # Copy results back s3
-aws aws s3 cp --recursive ${dest_local_path} ${dest_s3}
+aws aws s3 cp --recursive ${dest_local_path}/ ${dest_s3}
