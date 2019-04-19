@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-src_s3=$1
+tmp_dir=$(python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)')
+src_s3=$1/${tmp_dir}
 src_local_path=$2
 dest_s3=$3
-dest_local_path=$4
+dest_local_path=$4/${tmp_dir}
 minJava=$5
 maxJava=$6
 setupfile_s3=$7
