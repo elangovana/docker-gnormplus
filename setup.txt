@@ -13,11 +13,11 @@
 #close: False
 
 [Focus Species]
-    FocusSpecies = 9606
+	FocusSpecies = 9606
 [Dictionary & Model]
-    DictionaryFolder = /GNormPlusJava/Dictionary
-    GNRModel = /GNormPlusJava/Dictionary/GNR.Model
-    SCModel = /GNormPlusJava/Dictionary/SimConcept.Model
-    GeneIDMatch = True
-    Normalization2Protein = False
-    DeleteTmp = True
+	DictionaryFolder = Dictionary
+	GNRModel = Dictionary/GNR.Model
+	SCModel = Dictionary/SimConcept.Model
+	GeneIDMatch = True
+	Normalization2Protein = True
+	DeleteTmp = True

@@ -32,13 +32,13 @@ Docker for Gnormplus for gene named entity recognition & gene normalisation
     #close: False
     
     [Focus Species]
-        FocusSpecies = All
+        FocusSpecies = 9606
     [Dictionary & Model]
-        DictionaryFolder = /GNormPlusJava/Dictionary
-        GNRModel = /GNormPlusJava/Dictionary/GNR.Model
-        SCModel = /GNormPlusJava/Dictionary/SimConcept.Model
+        DictionaryFolder = Dictionary
+        GNRModel = Dictionary/GNR.Model
+        SCModel = Dictionary/SimConcept.Model
         GeneIDMatch = True
-        Normalization2Protein = False
+        Normalization2Protein = True
         DeleteTmp = True
     ```
 
