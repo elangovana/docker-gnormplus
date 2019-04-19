@@ -33,7 +33,7 @@ This is the job definition for this sample job.
             "memory": memoryInMB,
             "command": [
                 "/bin/bash",
-                "aws_batch_wrapper.sh"
+                "aws_batch_wrapper.sh",
                 "Ref::src_s3",
                 "Ref::src_local",
                 "Ref::dest_s3",
