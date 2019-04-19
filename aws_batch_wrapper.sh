@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 
 tmp_dir=$(python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)')
 src_s3=$1
@@ -16,7 +17,6 @@ mkdir -p ${dest_local_path}
 pip3 install awscli
 
 # Copy data from s3
-echo Running aws s3 cp ${src_s3} ${src_local_path}
 aws s3 cp ${src_s3} ${src_local_path}
 
 # Optionally copy setup s3
@@ -29,10 +29,7 @@ fi
 
 # Run
 cd /GNormPlusJava
-echo Running java -Xmx${maxJava} -Xms${minJava} -jar GNormPlus.jar ${src_local_path}  ${dest_local_path} setup.txt
-
 java -Xmx${maxJava} -Xms${minJava} -jar GNormPlus.jar ${src_local_path}  ${dest_local_path} setup.txt
 
 # Copy results back s3
-echo Running aws s3 cp --recursive ${dest_local_path} ${dest_s3}
 aws aws s3 cp --recursive ${dest_local_path} ${dest_s3}
