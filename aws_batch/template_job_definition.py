@@ -16,9 +16,14 @@ This is the job definition for this sample job.
         "type": "container",
         # These are the arguments for the job
         "parameters": {
-            "outputdir": "/data",
-            "s3destination": job_param_s3uri_destination,
-            "log_level": "INFO"
+            "src_local": "/data/input",
+            "dest_local": "/data/output",
+            "src_s3": job_param_s3uri_destination,
+            "dest_s3":job_param_s3uri_destination,
+            "minMemory":"10G",
+            "maxMemory": "20G",
+            "s3_setup_file":job_param_s3uri_destination
+
 
         },
         # Specify container & jobs properties include entry point and job args that are referred to in parameters
