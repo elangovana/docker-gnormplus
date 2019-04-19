@@ -18,7 +18,7 @@
     ```bash
     export PYTHONPATH=./aws_batch
     
-    python aws_batch/register_job.py <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_DEFAULT_REGION>.amazonaws.com/aws-batch-sample-python:latest <s3bucketname>
+    python aws_batch/register_job.py lanax/gnormplus <s3bucketname>
     
     #For full details
     python aws_batch/register_job.py -h 
