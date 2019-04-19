@@ -19,5 +19,5 @@
 	GNRModel = Dictionary/GNR.Model
 	SCModel = Dictionary/SimConcept.Model
 	GeneIDMatch = True
-	Normalization2Protein = True
+	Normalization2Protein = False
 	DeleteTmp = True
