@@ -28,3 +28,10 @@
 2. If you go to the AWS Batch console -- Job definition , you will see the new job called aws_batch_python_sample.
 
 5. You can then trigger a new job through the AWS Batch console. Pass in the name of the s3destination as one of the parameters in the job.
+
+6. Once you have created the job definition, run to submit multiple jobs
+    
+    ````bash
+    python submit_multiple_jobs.py gnormplus_job_def:16 Gnormplus_queue s3://yourbucket/prefix_input/  s3://yourbucket/prefix_output/ s3://yourbucket/settings/setup.txt
+
+    ````
