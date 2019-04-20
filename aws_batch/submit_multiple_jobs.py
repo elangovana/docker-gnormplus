@@ -64,7 +64,7 @@ def submit_multiple(job_def, queue_name, s3_source_prefix, s3_destination_prefix
                     min_mem="10G", max_mem="20G"):
     # Submit job for each prefix
     for s3_bucket, s3_key in list_files(s3_source_prefix):
-        sleep(5)
+        sleep(1)
         submit_job(job_def, queue_name, "s3://{}/{}".format(s3_bucket, s3_key), s3_destination_prefix,
                    s3_setup, src_local, dest_local,
                    min_mem, max_mem)
