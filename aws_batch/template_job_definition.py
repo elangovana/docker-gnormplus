@@ -65,7 +65,7 @@ This is the job definition for this sample job.
                 }
             ],
             "readonlyRootFilesystem": False,
-            "privileged": True,
+            "privileged": False,
             "ulimits": [],
             "user": ""
         },
