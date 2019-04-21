@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 set -x
 
 tmp_dir=$(python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)')
